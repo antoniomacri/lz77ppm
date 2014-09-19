@@ -1,0 +1,15 @@
+bin/liblz77ppm-test
+bin/lz77ppm-cli
+doc/tikz
+doc/*.aux
+doc/*.log
+doc/*.pdf
+doc/*.out
+doc/*.synctex.gz
+doc/*.toc
+lib/
+obj/
+.metadata/
+.settings/
+.project
+.cproject

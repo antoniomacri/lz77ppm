@@ -1,0 +1,66 @@
+% !TeX program = pdfLaTeX -shell-escape
+% !TeX encoding = UTF-8
+
+\newcommand\inputdata{BAAABBCA}
+\newcommand\windowsize{4}
+\newcommand\lookaheadsize{2}
+
+\documentclass[
+  tikz, png,
+  class=extarticle, 8pt,
+  convert={density=200, outfile=img/\jobname.png},
+]{standalone}
+
+\usepackage{fourier}
+\usepackage[fleqn]{amsmath}
+
+\usetikzlibrary{backgrounds, chains, decorations.pathreplacing}
+
+\tikzstyle{every label} =
+  [text depth=1em, distance=0]
+\tikzstyle{every node} +=
+  [outer sep=0pt]
+\tikzstyle{background rectangle} =
+  [draw=none]
+\tikzstyle{array} =
+  [node distance=0.1em, minimum height=1.5em]
+\tikzstyle{array item} =
+  [draw, on chain, fill=white!90!yellow, minimum width=2em]
+\tikzstyle{array item label} =
+  [font=\scriptsize, inner sep=0, label distance=-1ex]
+\tikzstyle{window label} =
+  [font=\footnotesize, inner sep=0]
+\tikzstyle{lookahead label} =
+  [font=\footnotesize, inner sep=0]
+
+
+\makeatletter
+\newcommand*\printbuffer[2]{%
+  $^{#1}$ #2%
+}
+\newcommand*\buildpictures[1]{%
+  \IfFileExists{tikz/#1-data-0.tex}{}{%
+    \PackageWarningNoLine{\jobname}{Using write18 to generate the required files}%
+    \immediate\write18{../bin/lz77ppm-tikztree -f tikz
+      -w \windowsize\space -l \lookaheadsize\space \inputdata}%
+  }%
+  \@tempcnta=\z@
+  \loop
+    \IfFileExists{tikz/#1-data-\the\@tempcnta.tex}{%
+      \input{tikz/#1-data-\the\@tempcnta.tex}\clearpage
+    }{%
+      \IfFileExists{tikz/#1-tree-\the\@tempcnta.tex}{%
+        \PackageError{\jobname}{Extra file `tikz/#1-tree-\the\@tempcnta.tex'!}{}%
+      }{}%
+      \@tempswafalse
+    }%
+    \advance\@tempcnta by\@ne\relax
+    \if@tempswa\repeat
+}
+\makeatother
+
+
+\begin{document}
+\footnotesize
+\buildpictures{\inputdata}
+\end{document}
