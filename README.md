@@ -4,7 +4,7 @@ lz77ppm
 
 A simple implementation of the LZ77 compression algorithm in C.
 
-Academic project, _Progettazione e Produzione Multimediale_, Università di Pisa.
+Academic project, _Progettazione e Produzione Multimediale_ (PPM), Laurea Magistrale in Ingegneria Informatica, Università di Pisa.
 
 This project is written in C, following the C99 standard, using GCC, `make` and `doxygen`.
 
@@ -171,7 +171,7 @@ The figure below shows how the sliding window and look-ahead buffer change durin
 
 | *W*max = 4, *L*max = 2 |
 |:----------------------:|
-| ![data](https://bitbucket.org/antoniomacri/lz77ppm/raw/master/doc/img/print-curr-buffers-0.png) ![data](https://bitbucket.org/antoniomacri/lz77ppm/raw/master/doc/img/print-curr-buffers-1.png) ![data](https://bitbucket.org/antoniomacri/lz77ppm/raw/master/doc/img/print-curr-buffers-2.png) ![data](https://bitbucket.org/antoniomacri/lz77ppm/raw/master/doc/img/print-curr-buffers-3.png) ![data](https://bitbucket.org/antoniomacri/lz77ppm/raw/master/doc/img/print-curr-buffers-4.png) ![data](https://bitbucket.org/antoniomacri/lz77ppm/raw/master/doc/img/print-curr-buffers-5.png) ![data](https://bitbucket.org/antoniomacri/lz77ppm/raw/master/doc/img/print-curr-buffers-6.png) ![data](https://bitbucket.org/antoniomacri/lz77ppm/raw/master/doc/img/print-curr-buffers-7.png) |
+| ![data](doc/img/print-curr-buffers-0.png) ![data](doc/img/print-curr-buffers-1.png) ![data](doc/img/print-curr-buffers-2.png) ![data](doc/img/print-curr-buffers-3.png) ![data](doc/img/print-curr-buffers-4.png) ![data](doc/img/print-curr-buffers-5.png) ![data](doc/img/print-curr-buffers-6.png) ![data](doc/img/print-curr-buffers-7.png) |
 
 
 Encoding the match length with Huffman
@@ -234,11 +234,11 @@ On the other hand, when the algorithm steps through the tree during a search and
 
 | Data | Tree |
 |:----:|:----:|
-| ![data](https://bitbucket.org/antoniomacri/lz77ppm/raw/master/doc/img/print-tree-0.png)  | ![data](https://bitbucket.org/antoniomacri/lz77ppm/raw/master/doc/img/print-tree-1.png)  |
-| ![data](https://bitbucket.org/antoniomacri/lz77ppm/raw/master/doc/img/print-tree-2.png)  | ![data](https://bitbucket.org/antoniomacri/lz77ppm/raw/master/doc/img/print-tree-3.png)  |
-| ![data](https://bitbucket.org/antoniomacri/lz77ppm/raw/master/doc/img/print-tree-4.png)  | ![data](https://bitbucket.org/antoniomacri/lz77ppm/raw/master/doc/img/print-tree-5.png)  |
-| ![data](https://bitbucket.org/antoniomacri/lz77ppm/raw/master/doc/img/print-tree-6.png)  | ![data](https://bitbucket.org/antoniomacri/lz77ppm/raw/master/doc/img/print-tree-7.png)  |
-| ![data](https://bitbucket.org/antoniomacri/lz77ppm/raw/master/doc/img/print-tree-8.png)  | ![data](https://bitbucket.org/antoniomacri/lz77ppm/raw/master/doc/img/print-tree-9.png)  |
-| ![data](https://bitbucket.org/antoniomacri/lz77ppm/raw/master/doc/img/print-tree-10.png) | ![data](https://bitbucket.org/antoniomacri/lz77ppm/raw/master/doc/img/print-tree-11.png) |
-| ![data](https://bitbucket.org/antoniomacri/lz77ppm/raw/master/doc/img/print-tree-12.png) | ![data](https://bitbucket.org/antoniomacri/lz77ppm/raw/master/doc/img/print-tree-13.png) |
-| ![data](https://bitbucket.org/antoniomacri/lz77ppm/raw/master/doc/img/print-tree-14.png) | ![data](https://bitbucket.org/antoniomacri/lz77ppm/raw/master/doc/img/print-tree-15.png) |
+| ![data](doc/img/print-tree-0.png)  | ![data](doc/img/print-tree-1.png)  |
+| ![data](doc/img/print-tree-2.png)  | ![data](doc/img/print-tree-3.png)  |
+| ![data](doc/img/print-tree-4.png)  | ![data](doc/img/print-tree-5.png)  |
+| ![data](doc/img/print-tree-6.png)  | ![data](doc/img/print-tree-7.png)  |
+| ![data](doc/img/print-tree-8.png)  | ![data](doc/img/print-tree-9.png)  |
+| ![data](doc/img/print-tree-10.png) | ![data](doc/img/print-tree-11.png) |
+| ![data](doc/img/print-tree-12.png) | ![data](doc/img/print-tree-13.png) |
+| ![data](doc/img/print-tree-14.png) | ![data](doc/img/print-tree-15.png) |
